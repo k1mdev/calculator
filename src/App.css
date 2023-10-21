@@ -64,18 +64,22 @@
 .outerContainer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-top: 30vh;
+}
+
+.display {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .buttons {
   width: 223px;
   height: 280px;
-  /* background-color: red; */
+  background-color: red;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 5px;
-  /* align-items: center; */
-  /* align-content: center; */
-  justify-content: center;
+  justify-content: space-between;
 }

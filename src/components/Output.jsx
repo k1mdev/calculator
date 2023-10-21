@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/LargeButton.css';
+import '../styles/Output.css';
 
 export default function Output(props) {
     return (
         <div className="outputContainer">
-            <p>{props.total}</p>
+            <output className="output">{props.total}</output>
         </div>
     )
 }

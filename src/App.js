@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="outerContainer">
-      <span className="display"><Output /></span>
+      <span className="display"><Output total="0"/></span>
       <div className="buttons">
         <span className="button7"><Button value="7" /></span>
         <span className="button8"><Button value="8" /></span>

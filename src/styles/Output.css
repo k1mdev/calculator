@@ -1,7 +1,13 @@
-.outputContainer * {
+.outputContainer {
+    display: flex;
     border: 1px solid black;
-    width: 300px;
-    height: 200px;
-    background-color: black;
+    width: 221.5px;
+    height: 65px;
     font-size: xx-large;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.output {
+    margin-right: 5px;
 }
