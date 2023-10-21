@@ -61,11 +61,21 @@
 
 
 
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;
+}
+
 .buttons {
-  width: 250px;
-  height: 250px;
-  background-color: red;
+  width: 223px;
+  height: 280px;
+  /* background-color: red; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 5px;
+  /* align-items: center; */
+  /* align-content: center; */
+  justify-content: center;
 }
