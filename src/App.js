@@ -61,7 +61,7 @@ function App() {
   return (
     <div className="centerContents">
       <div className="outerBorder">
-        <span className="display"><Output total={output}/></span>
+        <output className="display" >{output}</output>
         <div className="buttons">
           <button className="numButton" id="button7" value="7" onClick={putNum}>7</button>
           <button className="numButton" id="button8" value="8" onClick={putNum}>8</button>

@@ -60,6 +60,16 @@
   margin-bottom: 7px;
 }
 
+.display {
+  display: flex;
+  border: 1px solid black;
+  width: 221.5px;
+  height: 65px;
+  font-size: xx-large;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
 .buttons {
   width: 223px;
   height: 280px;
