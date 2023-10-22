@@ -57,7 +57,7 @@
 
 .display {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .buttons {
@@ -70,14 +70,42 @@
   justify-content: space-between;
 }
 
+button {
+  width: 50px;
+  height: 50px;
+  border: 1px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.numButton {
+  background-color: white;
+}
+
 .opButton {
-  background-color: lightgray;
+  background-color: lightgrey;
 }
 
 #buttonC {
   background-color: lightcoral;
 }
 
+button:active {
+  background-color: grey;
+}
+
+#buttonC:active {
+  background-color: rgb(191, 84, 45);
+}
+
+#buttonEnter:active {
+  background-color: rgb(46, 172, 46);
+}
+
 #buttonEnter {
+  width: 221.5px;
   background-color: lightgreen;
 }
+
+

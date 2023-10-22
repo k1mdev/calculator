@@ -12,34 +12,44 @@ function App() {
 
   const inputRef = useRef(null); 
   const resultRef = useRef(null); 
-  const [output, setOutput] = useState(0);
+  const [output, setOutput] = useState(10);
+
+  function putNum(e) {
+    e.preventDefault();
+    setOutput((output) => output + e.target.value);
+  }
+
+  function reset(e) { 
+    e.preventDefault(); 
+    setOutput(0); 
+  };
 
   return (
     <div className="centerContents">
       <div className="outerBorder">
         <span className="display"><Output total={output}/></span>
         <div className="buttons">
-          <span className="numButton" id="button7"><Button value="7" /></span>
-          <span className="numButton" id="button8"><Button value="8" /></span>
-          <span className="numButton" id="button9"><Button value="9" /></span>
-          <span className="opButton" id="button/"><Button value="/" /></span>
+          <button className="numButton" id="button7" value="7" onClick={putNum}>7</button>
+          <button className="numButton" id="button8" value="8" onClick={putNum}>8</button>
+          <button className="numButton" id="button9" value="9" onClick={putNum}>9</button>
+          <button className="opButton" id="button/" value="/">/</button>
 
-          <span className="numButton" id="button4"><Button value="4" /></span>
-          <span className="numButton" id="button5"><Button value="5" /></span>
-          <span className="numButton" id="button6"><Button value="6" /></span>
-          <span className="opButton" id="button*"><Button value="*" /></span>
+          <button className="numButton" id="button4" value="4" onClick={putNum}>4</button>
+          <button className="numButton" id="button5" value="5" onClick={putNum}>5</button>
+          <button className="numButton" id="button6" value="6" onClick={putNum}>6</button>
+          <button className="opButton" id="button*" value="*">*</button>
 
-          <span className="numButton" id="button1"><Button value="1" /></span>
-          <span className="numButton" id="button2"><Button value="2" /></span>
-          <span className="numButton" id="button3"><Button value="3" /></span>
-          <span className="opButton" id="button-"><Button value="-" /></span>
+          <button className="numButton" id="button1" value="1" onClick={putNum}>1</button>
+          <button className="numButton" id="button2" value="2" onClick={putNum}>2</button>
+          <button className="numButton" id="button3" value="3" onClick={putNum}>3</button>
+          <button className="opButton" id="button-" value="-">-</button>
 
-          <span className="numButton" id="button0"><Button value="0" /></span>
-          <span className="numButton" id="button."><LargeButton value="." /></span>
-          <span className="opButton" id="button+"><Button value="+" /></span>
+          <button className="numButton" id="button0" value="0" onClick={putNum}>0</button>
+          <button className="numButton" id="button." value="." onClick={putNum}>.</button>
+          <button className="opButton" id="buttonC" value="C" onClick={reset}>C</button>
 
-          <span className="opButton" id="buttonC"><LargeButton value="C" /></span>
-          <span className="opButton" id="buttonEnter"><LargeButton value="Enter" /></span>    
+          <button className="opButton" id="button+" value="+">+</button>
+          <button className="opButton" id="buttonEnter" value="Enter">Enter</button>  
 
         </div>
       </div>
