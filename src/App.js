@@ -51,7 +51,7 @@ function App() {
   function calc(e) {
     e.preventDefault();
     try {
-      setOutput(eval(output));
+      setOutput(eval(output).toFixed(2));
     }
     catch {
 
