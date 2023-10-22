@@ -1,8 +1,6 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Button from './components/Button';
-import LargeButton from './components/LargeButton';
-import Output from './components/Output';
 import { useRef } from 'react';
 import { useState } from 'react';
 
