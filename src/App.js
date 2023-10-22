@@ -20,8 +20,27 @@ function App() {
   }
 
   function putOp(e) {
+    e.preventDefault();        
+    const finalChar = String(output).charAt(output.length - 1);
+    // " " since operator values are padded with spaces
+    let lastIsOp = (finalChar == " ");
+    if (!lastIsOp) {
+      setOutput((output) => output + e.target.value);  
+    }
+  }
+
+  function putDot(e) {
     e.preventDefault();
-    setOutput((output) => output + e.target.value)
+    let hasDot = false;
+    for (const char of String(output)) {
+      if (char == ".") {
+        hasDot = true;
+        break;
+      }
+    }
+    if (!hasDot) {
+      setOutput((output) => output + e.target.value);
+    }
   }
 
   function reset(e) { 
@@ -31,7 +50,12 @@ function App() {
 
   function calc(e) {
     e.preventDefault();
-    setOutput(eval(output));
+    try {
+      setOutput(eval(output));
+    }
+    catch {
+
+    }
   }
 
   return (
@@ -55,7 +79,7 @@ function App() {
           <button className="opButton" id="button-" value=" - " onClick={putOp}>-</button>
 
           <button className="numButton" id="button0" value="0" onClick={putNum}>0</button>
-          <button className="numButton" id="button." value="." onClick={putNum}>.</button>
+          <button className="numButton" id="button." value="." onClick={putDot}>.</button>
           <button className="opButton" id="buttonC" value="C" onClick={reset}>C</button>
 
           <button className="opButton" id="button+" value=" + " onClick={putOp}>+</button>
