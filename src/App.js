@@ -12,11 +12,16 @@ function App() {
 
   const inputRef = useRef(null); 
   const resultRef = useRef(null); 
-  const [output, setOutput] = useState(1);
+  const [output, setOutput] = useState(0);
 
   function putNum(e) {
     e.preventDefault();
-    setOutput((output) => output + e.target.value);
+    if (output == 0) {
+      setOutput(e.target.value);
+    }
+    else {
+      setOutput((output) => output + e.target.value);
+    }
   }
 
   function putOp(e) {
