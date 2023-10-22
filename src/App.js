@@ -28,7 +28,7 @@ function App() {
     e.preventDefault();        
     const finalChar = String(output).charAt(output.length - 1);
     // " " since operator values are padded with spaces
-    let lastIsOp = (finalChar == " ");
+    let lastIsOp = (finalChar == " " || finalChar == ".");
     if (!lastIsOp) {
       setOutput((output) => output + e.target.value);  
     }

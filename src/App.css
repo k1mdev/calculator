@@ -41,11 +41,15 @@
 .centerContents {
   display: flex;
   justify-content: center;
+  background-color: rgb(79, 79, 79);
+  width: 100vw;
+  height: 100vh;
 }
 
 .outerBorder {
   width: 253px;
   height: 380px;
+  background-color: rgb(244, 244, 244);
   display: flex;
   justify-content: center;
   flex-direction: column;
