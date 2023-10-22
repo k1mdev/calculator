@@ -38,9 +38,12 @@
 }
 
 
+.centerContents {
+  display: flex;
+  justify-content: center;
+}
 
-
-.outerContainer {
+.outerBorder {
   width: 253px;
   height: 380px;
   display: flex;
