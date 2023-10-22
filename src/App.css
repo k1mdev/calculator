@@ -41,11 +41,15 @@
 
 
 .outerContainer {
+  width: 253px;
+  height: 380px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-top: 25vh;
   align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .display {

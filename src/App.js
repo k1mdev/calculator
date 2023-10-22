@@ -14,14 +14,9 @@ function App() {
   const resultRef = useRef(null); 
   const [output, setOutput] = useState(0);
 
-  function add(e) {
-    e.preventDefault();
-    setOutput((output) => output + Number(inputRef.current.value));
-  }
-
   return (
     <div className="outerContainer">
-      <span className="display"><Output total="0"/></span>
+      <span className="display"><Output total={output}/></span>
       <div className="buttons">
         <span className="numButton" id="button7"><Button value="7" /></span>
         <span className="numButton" id="button8"><Button value="8" /></span>
